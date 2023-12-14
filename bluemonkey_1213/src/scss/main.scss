@@ -1,0 +1,90 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {}
+
+.uk-link-toggle:hover .uk-link, .uk-link:hover, a:hover {
+    text-decoration:none;
+}
+
+.logo_text{
+    border: 1px solid #727272;
+    font-size: 15px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    color: #727272;
+    padding: 2px 8px;
+    background-color: #fff;
+    &:hover{
+        background-color: burlywood;
+    }
+}
+.header_btn{
+    color: #333;
+    padding: 10px 20px;
+    border: 2px solid #f7b157;
+    font-weight: bold;
+    letter-spacing: 0.2em;
+    text-align: center;
+    border-radius: 50px;
+    &:hover{
+        background-color: aqua;
+        color: #fff;
+    }
+
+}
+ 
+.uk-offcanvas-bar {
+    background-color: #fff;
+    a{
+        color: black;
+}
+    }
+
+
+    .plan_btn{
+        background-color: #ffdd3d;
+        padding: 10px 96px;
+        border-radius: 30px;
+        font-size: 22px;
+        font-weight: bold;
+        color: #000;
+        border: 4px solid #fff;
+        letter-spacing: 0.5rem;
+        display: inline-block;
+        position: relative;
+        &:hover{
+            background-color: #ffec7f;
+            color: #000;
+        }
+        &::before{
+            content: "→";
+            position: absolute;
+            right: 10px;
+            top: 8px;
+        }
+        &::after{
+            content: "" ;
+        }
+    }
+
+@media (min-width:1024px){
+    #offcanvas-flip{
+        display: block;
+        position: static;
+        .uk-offcanvas-bar{
+            position: static;
+            width: auto;
+            padding: 0;
+            background-color: transparent;
+            .uk-offcanvas-close{
+                display: none;
+            }
+            a{
+                color: black;
+            }
+        }
+    }
+    }
+

@@ -4,11 +4,11 @@
 
 @layer utilities {}
 
-.uk-link-toggle:hover .uk-link, .uk-link:hover, a:hover {
+    .uk-link-toggle:hover .uk-link, .uk-link:hover, a:hover {
     text-decoration:none;
-}
+    }
 
-.logo_text{
+    .logo_text{
     border: 1px solid #727272;
     font-size: 15px;
     font-weight: bold;
@@ -19,8 +19,8 @@
     &:hover{
         background-color: burlywood;
     }
-}
-.header_btn{
+    }
+    .header_btn{
     color: #333;
     padding: 10px 20px;
     border: 2px solid #f7b157;
@@ -33,7 +33,7 @@
         color: #fff;
     }
 
-}
+    }
  
 .uk-offcanvas-bar {
     background-color: #fff;
@@ -94,6 +94,7 @@
             background-size: 70%;
             background-repeat: no-repeat;
             background-position: center;
+            
         }
         &.font_icon.people::before{
             background-image: url(https://cdn-icons-png.flaticon.com/256/456/456283.png);
@@ -105,7 +106,7 @@
             background-image: url(https://cdn-icons-png.flaticon.com/256/597/597177.png);
         }
 
-        input{
+        input,textarea{
             background-color: #f6f8fd;
             border: 1px solid #000;
             padding: 10px 24px;
@@ -118,13 +119,42 @@
             }
         }
     }
-.input_chose{
+    .input_chose{
     input{
         display: none;
     }
-}
+    label{
+        padding: 10px 13px;
+        border-radius: 40px;
+        &:hover{
+            background-color: #cac4c4;
+            
+        }
+        cursor: pointer;
+        &::before{
+            content: "";
+            display: inline-block;
+            width: 25px;
+            height: 25px;
+            background-color: #fff;
+            border-radius: 50%;
+            border: 2px solid #777;
+            vertical-align: middle;
+            margin-right: 5px;
+            position: relative;
+            top: -1px;
+        }
+    }
 
-@media (min-width:1024px){
+    input:checked + label{
+        background-color: #dfdfdf;
+    }
+    input:checked + label::before{
+        border: 7px solid #1193e1;
+    }
+    }
+
+    @media (min-width:1024px){
     #offcanvas-flip{
         display: block;
         position: static;
@@ -141,5 +171,5 @@
             }
         }
     }
-    }
+ }
 

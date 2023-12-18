@@ -4,9 +4,27 @@
 
 @layer utilities {}
 
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@200;600;800&family=Playfair+Display:ital@1&display=swap');
+@font-face {
+	font-family: 'AbelRegular';
+           src: url('fonts/abel-regular-webfont.eot');
+           src: url('fonts/abel-regular-webfont.eot?#iefix') format('embedded-opentype'),  url('fonts/abel-regular-webfont.woff') format('woff'),  url('fonts/abel-regular-webfont.ttf') format('truetype'),  url('fonts/abel-regular-webfont.svg#AbelRegular') format('svg');
+    }
+
     .uk-link-toggle:hover .uk-link, .uk-link:hover, a:hover {
     text-decoration:none;
     }
+    
+    .body{
+        font-family: 'Noto Sans TC', 'Microsoft JhengHei',sans-serif;
+        font-weight: 800;
+    }
+
+    .txtJL{
+        font-family: "AbelRegular" , sans-serif;
+        font-weight: normal;
+    }
+ 
 
     .logo_text{
     border: 1px solid #727272;
@@ -20,6 +38,11 @@
         background-color: burlywood;
     }
     }
+
+    #header_ui .uk-active a{
+        color: #1b96e0;
+    }
+
     .header_btn{
     color: #333;
     padding: 10px 20px;
@@ -153,6 +176,31 @@
         border: 7px solid #1193e1;
     }
     }
+    .zoom{
+        transform: scale(1.01, 1.01);
+        overflow: hidden;
+        position: relative;
+        .inner{
+          transition: transform .42s cubic-bezier(.15,.46,.57,1);
+          &::before {
+            content: "";
+            transition: opacity .42s cubic-bezier(.15,.46,.57,1);
+            opacity: 0;
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-color: rgba(255,255,255,0.25);
+          }
+        }
+        &:hover .inner{
+          transform: scale(1.08, 1.08);
+          &::before{
+            opacity: 1;
+          }
+        }
+      }
 
     @media (min-width:1024px){
     #offcanvas-flip{

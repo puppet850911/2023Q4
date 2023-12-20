@@ -23,6 +23,7 @@
     .txtJL{
         font-family: "AbelRegular" , sans-serif;
         font-weight: normal;
+        
     }
  
 
@@ -36,8 +37,10 @@
     background-color: #fff;
     &:hover{
         background-color: burlywood;
+        animation: hover-shine 1.5s cubic-bezier(0, 0.58, 1, 0.44) infinite;
     }
     }
+
 
     #header_ui .uk-active a{
         color: #1b96e0;
@@ -51,11 +54,6 @@
     letter-spacing: 0.2em;
     text-align: center;
     border-radius: 50px;
-    &:hover{
-        background-color: aqua;
-        color: #fff;
-    }
-
     }
  
 .uk-offcanvas-bar {
@@ -75,20 +73,46 @@
         letter-spacing: 0.5rem;
         display: inline-block;
         position: relative;
+        // animation: arrmove .95s infinite alternate;
+        // animation-timing-function: ease-in-out;
+        animation: btn-click 1.5s cubic-bezier(0, 0.58, 1, 0.44) infinite;
         &:hover{
             background-color: #ffec7f;
             color: #000;
+            animation:none;
         }
         &::before{
             content: "→";
             position: absolute;
             right: 10px;
             top: 8px;
+            transition:.3s ease all ;
+        }
+        &:hover::before{
+            right: 30px;
         }
         &::after{
             content: "" ;
         }
     }
+    // @keyframes arrmove{0%{transform:translateY(0)}100%{transform:translateY(14px)}}
+    @keyframes btn-click {
+  10%{
+    transform: rotate(8deg);
+  }
+  20%{
+    transform: rotate(-4deg);
+  }
+  30%{
+    transform: rotate(2.5deg);
+  }
+  40%{
+    transform: rotate(-2.5deg);
+  }
+  50%,100%{
+    transform: rotate(0deg);
+  }
+}
     .yellow_line{
         display:inline-block;
         position: relative;
@@ -220,4 +244,27 @@
         }
     }
  }
+
+ @keyframes hover-shine {
+    0%{
+      background: #52b14c;
+      color: white;
+    }
+    25%{
+      background: #ffdd3d;
+      color: white;
+    }
+    50%{
+      background: #f8b158;
+      color: white;
+    }
+    75%{
+      background: #f15b3a;
+      color: white;
+    }
+    100%{
+      background: #28b2ee;
+      color: white;
+    }
+  }
 

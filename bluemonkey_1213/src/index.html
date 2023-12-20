@@ -71,7 +71,7 @@
        
         <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
           <%for(var i=0;i<4;i++){%>
-            <div class="overflow-hidden rounded-2xl">
+            <div data-wow-duration="1s" data-wow-delay="1s" class="wow animate__animated animate__fadeIn overflow-hidden rounded-2xl">
               <div class="bg-[#ffde25] text-black text-[18px] py-2">美甲美妝業</div>
               <div style="aspect-ratio: 16 / 9;" class="zoom relative">
                  <a class="inner w-full h-full block" href="#">
@@ -180,6 +180,11 @@
   <!-- UIkit JS -->
 <script src="https://cdn.jsdelivr.net/npm/uikit@3.15.10/dist/js/uikit.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/uikit@3.15.10/dist/js/uikit-icons.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+
+<script>
+new WOW().init();
+</script>
 </body>
 
 </html>
